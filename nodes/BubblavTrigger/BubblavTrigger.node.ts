@@ -5,6 +5,7 @@ import type {
 	INodeTypeDescription,
 	IWebhookFunctions,
 	IWebhookResponseData,
+	JsonObject,
 } from 'n8n-workflow';
 import { NodeApiError, NodeConnectionTypes, NodeOperationError } from 'n8n-workflow';
 
@@ -119,8 +120,10 @@ export class BubblavTrigger implements INodeType {
 						// server-side. Surface anything else so deactivation
 						// failures stay visible.
 						if (error instanceof NodeApiError && error.httpCode === '404') continue;
-						// eslint-disable-next-line @n8n/community-nodes/require-node-api-error
-						throw error;
+						if (error instanceof NodeOperationError) {
+							throw new NodeOperationError(this.getNode(), (error as Error).message);
+						}
+						throw new NodeApiError(this.getNode(), error as JsonObject);
 					}
 				}
 

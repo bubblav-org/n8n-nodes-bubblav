@@ -814,9 +814,8 @@ export class Bubblav implements INodeType {
 					});
 					continue;
 				}
-				if (error instanceof NodeApiError || error instanceof NodeOperationError) {
-					// eslint-disable-next-line @n8n/community-nodes/require-node-api-error
-					throw error;
+				if (error instanceof NodeOperationError) {
+					throw new NodeOperationError(this.getNode(), (error as Error).message, { itemIndex: i });
 				}
 				throw new NodeApiError(this.getNode(), error as JsonObject, { itemIndex: i });
 			}
