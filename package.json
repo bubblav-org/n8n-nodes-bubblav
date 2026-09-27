@@ -1,0 +1,47 @@
+{
+  "name": "@bubblav/n8n-nodes-bubblav",
+  "version": "1.0.0",
+  "description": "n8n nodes to integrate BubblaV AI chatbot events and actions",
+  "license": "MIT",
+  "homepage": "https://github.com/bubblav-org/n8n-nodes-bubblav",
+  "keywords": [
+    "n8n-community-node-package",
+    "n8n",
+    "bubblav",
+    "chatbot",
+    "ai-chat"
+  ],
+  "author": { "name": "BubblaV", "email": "support@bubblav.com" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bubblav-org/n8n-nodes-bubblav.git"
+  },
+  "publishConfig": { "access": "public" },
+  "scripts": {
+    "build": "n8n-node build",
+    "build:watch": "tsc --watch",
+    "dev": "n8n-node dev",
+    "lint": "n8n-node lint",
+    "lint:fix": "n8n-node lint --fix",
+    "release": "n8n-node release",
+    "prepublishOnly": "n8n-node prerelease"
+  },
+  "files": ["dist"],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "strict": true,
+    "credentials": ["dist/credentials/BubblavApi.credentials.js"],
+    "nodes": [
+      "dist/nodes/Bubblav/Bubblav.node.js",
+      "dist/nodes/BubblavTrigger/BubblavTrigger.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@n8n/node-cli": "*",
+    "eslint": "9.32.0",
+    "prettier": "3.6.2",
+    "release-it": "^19.0.4",
+    "typescript": "5.9.2"
+  },
+  "peerDependencies": { "n8n-workflow": "*" }
+}

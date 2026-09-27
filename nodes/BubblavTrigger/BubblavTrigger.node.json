@@ -1,0 +1,22 @@
+{
+	"node": "n8n-nodes-bubblav.bubblavTrigger",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Communication", "Marketing"],
+	"subcategories": {
+		"Communication": ["Chat"],
+		"Marketing": ["Marketing"]
+	},
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://docs.bubblav.com/user-guide/integrations/n8n"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://docs.bubblav.com/user-guide/integrations/n8n"
+			}
+		]
+	}
+}
