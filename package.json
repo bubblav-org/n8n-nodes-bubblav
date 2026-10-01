@@ -1,6 +1,6 @@
 {
   "name": "@bubblav/n8n-nodes-bubblav",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "n8n nodes to integrate BubblaV AI chatbot events and actions",
   "license": "MIT",
   "homepage": "https://github.com/bubblav-org/n8n-nodes-bubblav",
