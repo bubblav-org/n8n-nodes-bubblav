@@ -2,11 +2,7 @@
 	"node": "n8n-nodes-bubblav.bubblav",
 	"nodeVersion": "1.0",
 	"codexVersion": "1.0",
-	"categories": ["Communication", "Marketing"],
-	"subcategories": {
-		"Communication": ["Chat"],
-		"Marketing": ["Marketing"]
-	},
+	"categories": ["Communication", "Marketing & Content"],
 	"resources": {
 		"credentialDocumentation": [
 			{
