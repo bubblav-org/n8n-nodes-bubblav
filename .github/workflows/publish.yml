@@ -92,6 +92,6 @@ jobs:
         # registry-url — setup-node would inject a bogus _authToken line).
         # --provenance signs the attestation; RELEASE_MODE satisfies the
         # n8n-node prerelease gate that otherwise blocks bare `npm publish`.
-        run: 'npm publish --provenance --loglevel verbose'
+        run: 'npm publish --provenance'
         env:
           RELEASE_MODE: 'true'
